@@ -1,0 +1,109 @@
+var request = require('request');
+var fs = require('fs');
+
+var messages = {
+	'successPushNotification' : 'Successfully sent Push Notification: ',
+	'errorPushNotification' : 'Error sending Push Notification. Details: ',
+	'successFileUpload': 'Successfully uploaded file: ',
+	'errorFileUpload': 'Error sending push notification. Details: ',
+};
+
+var saveUploadedFile = function(targetPath, tempPath, failure, success) {
+	 fs.rename(tempPath, targetPath, function(err) {
+        if (err) {
+        	failure(err);
+        } else {
+        	// delete the temporary file, so that the explicitly set temporary upload dir does not get filled with unwanted files
+	        fs.unlink(tempPath, function() {
+	            if (err) {
+	            	failure(err);
+	            } else {
+	            	success();
+	            }
+	        });
+        }
+    });
+}
+
+var redirectToConsole = function(res, message) {
+	res.redirect('/console?message='+encodeURIComponent(message));
+}
+
+/*
+ * GET console
+ */
+exports.index = function(req, res){
+	console.log(req.query);
+	res.render('index', { title: 'Rutgers Day Admin Console', message: req.query.message });
+};
+
+/*
+ * GET login form
+ */
+exports.loginForm = function(req, res){
+	console.log(req.user);
+	res.render('login');
+};
+
+/*
+ * POST push notification
+ */
+exports.pushNotification = function(req, res){
+	console.log(req.user);
+	var text = req['body']['push-notification-text'];
+	var options = {
+		url: 'https://api.parse.com/1/push',
+		headers: {
+			'Content-Type': 'application/json',
+			'X-Parse-Application-Id': 'SPFc8Yj0qYAqPDLWoy6ZhtU3X9e6f8fAhzttXKPc',
+			'X-Parse-REST-API-Key': 'm3Y556aJb7MArv56I6Q6eNGoYkc5j7Dp2OJSVWmK'
+		},
+		json: {
+			"channels": ["global"], 
+			"data": {
+    			"alert": text,
+    			"sound": "default"
+    		}
+    	}
+	};
+
+	request.post(options, function (error, response, body) {
+		if (body['result'] && body['result'] == true) {
+			redirectToConsole(res, messages['successPushNotification'] + text);
+		} else {
+			redirectToConsole(res, messages['errorPushNotification'] + JSON.stringify(body));
+		}
+	});
+};
+
+/*
+ * POST Activity CSV Upload
+ */
+exports.activityCSVUpload = function(req, res) {
+	console.log(req.user);
+	var tmp_path = req['files']['activity-csv']['path'];
+	var file_name = 'activity.csv';
+	var target_path = './public/data/' + file_name;
+
+	saveUploadedFile(target_path, tmp_path, function(err) {
+		redirectToConsole(res, messages['errorFileUpload'] + err);
+	}, function(){
+		redirectToConsole(res, messages['successFileUpload'] + file_name);
+	});
+}
+
+/*
+ * POST Activity CSV Upload
+ */
+exports.specialProgramsCSVUpload = function(req, res) {
+	console.log(req.user);
+	var tmp_path = req['files']['special-programs-csv']['path'];
+	var file_name = 'special-programs.csv';
+	var target_path = './public/data/' + file_name;
+
+	saveUploadedFile(target_path, tmp_path, function(err) {
+		redirectToConsole(res, messages['errorFileUpload'] + err);
+	}, function(){
+		redirectToConsole(res, messages['successFileUpload'] + file_name);
+	});
+}

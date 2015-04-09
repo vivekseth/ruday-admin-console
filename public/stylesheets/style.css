@@ -1,0 +1,217 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font: 14px "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  color: #1C1C1C;
+  background-color: #EDEDED;
+}
+a {
+  color: #00B7FF;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/** Title Bar */
+.title-bar {
+	height: 70px;
+	line-height: 70px;
+	width: 100%;
+	background-color: #fff;
+	color: #1C1C1C;
+	font-weight: 400;
+	font-size: 34px;
+}
+.title-bar span.emphasis {
+	font-weight: 600;
+	float: left;
+	margin-left: 22px;
+}
+.title-bar span.normal {
+	float: left;
+	margin-left:9px;
+}
+
+.title-bar .logout-button {
+	font-size: 24px;
+	text-decoration: none;
+	float: right;
+	font-weight: 400;
+	margin-right: 22px;
+}
+.title-bar .logout-button:hover {
+	text-decoration: underline;
+}
+
+/** Content */
+.content {
+	width: 100%;
+	height: 100%;
+	float: left;
+	padding-bottom: 22px;
+}
+.left-content, .right-content {
+	max-width: 500px;
+	float: left;
+	padding: 0px;
+}
+.admin-component {
+	background-color: #fff;
+	float: left;
+	border: solid 1px #ddd;
+	margin-top: 22px;
+	margin-left: 22px;
+	padding: 22px;
+	min-width: 400px;
+}
+.admin-component h2 {
+	margin-top: 0px;
+	font-weight: 500;
+	color: #1C1C1C;
+	float: left;
+	font-size: 22px;
+}
+.admin-component .download-button {
+	float: right;
+	font-size: 22px;
+	text-decoration: none;
+}
+.admin-component .download-button:hover {
+	text-decoration: underline;
+}
+.admin-component form {
+	margin-top: 10px;
+	clear: left;
+}
+.push-notification-text {
+	width: 378px;	
+	height: 180px;
+	border: solid 1px #ddd;
+	border-radius: 10px;
+  	padding: 11px;
+  	font: 16px "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  	color: #444444;
+}
+
+/** Input Button */
+input[type="submit"] {
+    color: white;
+    background-color: #4ECE24;
+    border: solid 1px #ddd;
+    margin: 0 auto;
+    margin-top: 22px;
+    height: 40px;
+    width: 280px;
+    border-radius: 20px;
+    font: 16px "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+input[type="submit"]:hover {
+    background-color: #6EDD45;
+}
+
+/** Notification */
+.notification-div {
+	background-color: #242424;
+	margin: 0px;
+	padding: 0px;
+	height: 160px;
+	color: white;
+}
+.notification-div h1 {
+	text-align: center;
+	margin: 0px;
+	font-size: 34px;
+	font-weight: 600;
+	padding-top: 30px;
+}
+.notification-div p {
+	text-align: center;
+	font-size: 24px;
+	margin-top: 15px;
+}
+.notification-div .close-notification-button {
+	float: right;
+	margin-left: 50px;
+	position: absolute;
+	line-height: 160px;
+	color: white;
+	font-size: 40px;
+}
+
+/** Footer */
+.footer {
+	background-color: #666666;
+	position: absolute;
+	bottom: 0px;
+	height: 57px;
+	line-height: 57px;
+	width: 100%;
+	color: white;
+}
+.footer .update-information {
+	float: left;
+	margin-left: 22px;
+}
+.footer .contact-information {
+	float: right;
+	margin-right: 22px;
+}
+
+.footer p {
+	margin: 0px;	
+	font-size: 16px;
+	font-weight: 400;
+}
+.footer .emphasis {
+	font-weight: 600;	
+}
+.footer .footer-email-link {
+	text-decoration: none;
+	color: white;
+}
+.footer .footer-email-link:hover {
+	color: #00B7FF;
+	text-decoration: underline;
+}
+
+/** Login */
+.login-form-title {
+	text-align: center;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+.login-label {
+	float: left;
+	line-height: 34px;
+	margin: 0px;
+	padding: 0px;
+	font: 16px "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+.login-input {
+	float: right;
+	height: 24px;
+	width: 300px;
+	margin: 0px;
+	padding: 0px;
+	font: 16px "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+.username-section, .password-section {
+	padding-bottom: 20px;
+	overflow: auto;
+}
+.login-form input[type="submit"] {
+	margin-top: 10px;
+}
+.login-component {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	width: 400px;
+	margin-top: 16%;
+}

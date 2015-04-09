@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  div(class='title-bar')
+      span(class='emphasis') Rutgers Day 
+      span(class='normal') Administration Interface 
+
+  div(class='content')
+    div(class='admin-component login-component')
+      h2 Login Form
+      form(action='login', method='post', class='login-form')
+        div(class='username-section')
+          label(class='login-label') Username
+          input(type='text', name='username', class='login-input')
+        div(class='password-section')
+          label(class='login-label') Password
+          input(type='password', name='password', class='login-input')
+        div
+          input(type='submit', class='login-submit-button')

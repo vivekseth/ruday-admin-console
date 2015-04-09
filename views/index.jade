@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  
+  if message
+    div(class='notification-div')
+      // I should include font-awesome for this!
+      a(href='#', onclick='removeNotification();', class='close-notification-button')
+        i(class='fa fa-times-circle')
+      h1(class='console-notification') Notification!
+      p= message
+
+  div(class='title-bar')
+    span(class='emphasis') Rutgers Day 
+    span(class='normal') Administration Interface
+    a(href='/logout', class='logout-button') Log Out
+  
+  div(class='content')
+    
+    div(class='left-content')
+      div(class='admin-component')
+        h2 Activity CSV
+        a(class='download-button', href='/data/activity.csv') Download
+        form(action='activity-csv', method='post', enctype='multipart/form-data')
+          input(type='file', name='activity-csv')
+          br
+          input(type='submit')
+
+      div(class='admin-component')
+        h2 Special Programs CSV
+        a(class='download-button', href='/data/special-programs.csv') Download
+        form(action='special-programs-csv', method='post', enctype='multipart/form-data')
+          input(type='file', name='special-programs-csv')
+          br
+          input(type='submit')
+    
+    div(class='right-content')
+      div(class='admin-component')
+        h2 Send Push Notification
+        form(action='push', method='post')
+          textarea(name='push-notification-text', class='push-notification-text')
+          br
+          input(type='submit')
