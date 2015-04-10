@@ -19,18 +19,26 @@ block content
     
     div(class='left-content')
       div(class='admin-component')
-        h2 Activity CSV
-        a(class='download-button', href='/data/activity.csv') Download
-        form(action='activity-csv', method='post', enctype='multipart/form-data')
-          input(type='file', name='activity-csv')
+        h2 Programs CSV
+        a(class='download-button', href='/data/programs.csv') Download
+        form(action='programs-csv', method='post', enctype='multipart/form-data')
+          input(type='file', name='programs-csv')
           br
           input(type='submit')
 
       div(class='admin-component')
-        h2 Special Programs CSV
-        a(class='download-button', href='/data/special-programs.csv') Download
-        form(action='special-programs-csv', method='post', enctype='multipart/form-data')
-          input(type='file', name='special-programs-csv')
+        h2 Performances CSV
+        a(class='download-button', href='/data/performances.csv') Download
+        form(action='performances-csv', method='post', enctype='multipart/form-data')
+          input(type='file', name='performances-csv')
+          br
+          input(type='submit')
+
+      div(class='admin-component')
+        h2 Other CSV
+        a(class='download-button', href='/data/other.csv') Download
+        form(action='other-csv', method='post', enctype='multipart/form-data')
+          input(type='file', name='other-csv')
           br
           input(type='submit')
     

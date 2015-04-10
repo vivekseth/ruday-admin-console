@@ -39,6 +39,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+/** Authentication */
+
 // Set up login
 passport.use(new LocalStrategy(function(username, password, done) {
   	if (username === 'admin' && password === 'password') {
@@ -55,6 +57,7 @@ passport.deserializeUser(function(user, done) {
   done(null, user);
 });
 
+// Detect Authentication Status
 function authenticatedEndpoint(req, res, next) {
 	if (req.isAuthenticated()) {
 		next();
@@ -62,15 +65,18 @@ function authenticatedEndpoint(req, res, next) {
 		res.redirect('/');
 	}
 }
-
-// If signed in, redirect user to console.
-app.get('/', function(req, res, next){
+function notAuthenticatedEndpoint(req, res, next) {
 	if (req.isAuthenticated()) {
 		res.redirect('/console');
 	} else {
 		next();
 	}
-}, routes.loginForm);
+}
+
+/** Routes */
+
+// If signed in, redirect user to console.
+app.get('/', notAuthenticatedEndpoint, routes.loginForm);
 
 // Handle login
 app.get('/login', routes.loginForm);
@@ -86,11 +92,12 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-// Admin Console Functions
+// Admin Console
 app.get('/console', authenticatedEndpoint, routes.index);
 app.post('/push', authenticatedEndpoint, routes.pushNotification);
-app.post('/activity-csv', authenticatedEndpoint, routes.activityCSVUpload);
-app.post('/special-programs-csv', authenticatedEndpoint, routes.specialProgramsCSVUpload);
+app.post('/programs-csv', authenticatedEndpoint, routes.acceptFileUploadRoute('programs-csv', 'programs.csv'));
+app.post('/performances-csv', authenticatedEndpoint, routes.acceptFileUploadRoute('performances-csv', 'performances.csv'));
+app.post('/other-csv', authenticatedEndpoint, routes.acceptFileUploadRoute('other-csv', 'other.csv'));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

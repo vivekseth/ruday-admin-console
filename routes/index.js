@@ -25,9 +25,27 @@ var saveUploadedFile = function(targetPath, tempPath, failure, success) {
     });
 }
 
+// returns Route Handler
+var acceptFileUploadRoute = function(fileFormName, fileServerName) {
+	return function(req, res) {
+		console.log(req.user);
+		var tmp_path = req['files'][fileFormName]['path'];
+		var file_name = fileServerName;
+		var target_path = './public/data/' + file_name;
+
+		saveUploadedFile(target_path, tmp_path, function(err) {
+			redirectToConsole(res, messages['errorFileUpload'] + err);
+		}, function(){
+			redirectToConsole(res, messages['successFileUpload'] + file_name);
+		});
+	};
+}
+
 var redirectToConsole = function(res, message) {
 	res.redirect('/console?message='+encodeURIComponent(message));
 }
+
+
 
 /*
  * GET console
@@ -77,33 +95,6 @@ exports.pushNotification = function(req, res){
 };
 
 /*
- * POST Activity CSV Upload
+ * POST CSV File Upload
  */
-exports.activityCSVUpload = function(req, res) {
-	console.log(req.user);
-	var tmp_path = req['files']['activity-csv']['path'];
-	var file_name = 'activity.csv';
-	var target_path = './public/data/' + file_name;
-
-	saveUploadedFile(target_path, tmp_path, function(err) {
-		redirectToConsole(res, messages['errorFileUpload'] + err);
-	}, function(){
-		redirectToConsole(res, messages['successFileUpload'] + file_name);
-	});
-}
-
-/*
- * POST Activity CSV Upload
- */
-exports.specialProgramsCSVUpload = function(req, res) {
-	console.log(req.user);
-	var tmp_path = req['files']['special-programs-csv']['path'];
-	var file_name = 'special-programs.csv';
-	var target_path = './public/data/' + file_name;
-
-	saveUploadedFile(target_path, tmp_path, function(err) {
-		redirectToConsole(res, messages['errorFileUpload'] + err);
-	}, function(){
-		redirectToConsole(res, messages['successFileUpload'] + file_name);
-	});
-}
+exports.acceptFileUploadRoute = acceptFileUploadRoute;
