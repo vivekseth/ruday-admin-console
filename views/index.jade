@@ -35,6 +35,14 @@ block content
           input(type='submit')
 
       div(class='admin-component')
+        h2 Stages CSV
+        a(class='download-button', href='/data/stages.csv') Download
+        form(action='stages-csv', method='post', enctype='multipart/form-data')
+          input(type='file', name='stages-csv')
+          br
+          input(type='submit')
+      
+      div(class='admin-component')
         h2 Other CSV
         a(class='download-button', href='/data/other.csv') Download
         form(action='other-csv', method='post', enctype='multipart/form-data')

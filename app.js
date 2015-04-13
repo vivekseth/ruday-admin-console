@@ -97,6 +97,7 @@ app.get('/console', authenticatedEndpoint, routes.index);
 app.post('/push', authenticatedEndpoint, routes.pushNotification);
 app.post('/programs-csv', authenticatedEndpoint, routes.acceptFileUploadRoute('programs-csv', 'programs.csv'));
 app.post('/performances-csv', authenticatedEndpoint, routes.acceptFileUploadRoute('performances-csv', 'performances.csv'));
+app.post('/stages-csv', authenticatedEndpoint, routes.acceptFileUploadRoute('stages-csv', 'stages.csv'));
 app.post('/other-csv', authenticatedEndpoint, routes.acceptFileUploadRoute('other-csv', 'other.csv'));
 
 http.createServer(app).listen(app.get('port'), function(){
