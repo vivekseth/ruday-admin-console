@@ -5,10 +5,11 @@ var messages = {
 	'successPushNotification' : 'Successfully sent Push Notification: ',
 	'errorPushNotification' : 'Error sending Push Notification. Details: ',
 	'successFileUpload': 'Successfully uploaded file: ',
-	'errorFileUpload': 'Error sending push notification. Details: ',
+	'errorFileUpload': 'Error uploading file. Details: ',
 };
 
 var saveUploadedFile = function(targetPath, tempPath, failure, success) {
+	console.log(targetPath, tempPath);
 	 fs.rename(tempPath, targetPath, function(err) {
         if (err) {
         	failure(err);
@@ -28,16 +29,21 @@ var saveUploadedFile = function(targetPath, tempPath, failure, success) {
 // returns Route Handler
 var acceptFileUploadRoute = function(fileFormName, fileServerName) {
 	return function(req, res) {
-		console.log(req.user);
-		var tmp_path = req['files'][fileFormName]['path'];
-		var file_name = fileServerName;
-		var target_path = './public/data/' + file_name;
+		console.log(req['files']);
+		var size = req['files'][fileFormName]['size'];
+		if (size > 0) {
+			var tmp_path = req['files'][fileFormName]['path'];
+			var file_name = fileServerName;
+			var target_path = './public/data/' + file_name;
 
-		saveUploadedFile(target_path, tmp_path, function(err) {
-			redirectToConsole(res, messages['errorFileUpload'] + err);
-		}, function(){
-			redirectToConsole(res, messages['successFileUpload'] + file_name);
-		});
+			saveUploadedFile(target_path, tmp_path, function(err) {
+				redirectToConsole(res, messages['errorFileUpload'] + err);
+			}, function(){
+				redirectToConsole(res, messages['successFileUpload'] + file_name);
+			});
+		} else {
+			redirectToConsole(res, messages['errorFileUpload'] + 'Cannot upload empty file.');
+		}
 	};
 }
 
