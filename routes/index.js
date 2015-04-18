@@ -73,8 +73,8 @@ exports.pushNotification = function(req, res){
 		url: 'https://api.parse.com/1/push',
 		headers: {
 			'Content-Type': 'application/json',
-			'X-Parse-Application-Id': 'SPFc8Yj0qYAqPDLWoy6ZhtU3X9e6f8fAhzttXKPc',
-			'X-Parse-REST-API-Key': 'm3Y556aJb7MArv56I6Q6eNGoYkc5j7Dp2OJSVWmK'
+			'X-Parse-Application-Id': 'L4hwGiUpzXJNOuK3560BFS4ZFYe2AcH9hYO6A9OQ',
+			'X-Parse-REST-API-Key': 'zXT7vKWjF3DcOd4zE147zvpfRH8lBxkQCEzAF6my'
 		},
 		json: {
 			"channels": ["global"], 
