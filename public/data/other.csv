@@ -1,0 +1,64 @@
+ID,Title,Description,Campus,Zone,Location,Lat,Long
+ParkBusch54,Lot 54,Parking Lot 54,Busch,Life Sciences Area,"Taylor Road & Bevier Road, Piscataway",40.526229,-74.461605
+ParkBusch51,Lot 51,Parking Lot 51,Busch,Busch Student Center Area,"Bartholemew Road, Piscataway",40.527012,-74.460876
+ParkBusch68,Lot 68,Parking Lot 68,Busch,Busch Student Center Area,"Bartholemew Road next to Busch Student Center, Piscataway",40.525381,-74.459888
+ParkBusch67,Lot 67,Parking Lot 67/67B,Busch,Busch Student Center Area,"Bartholemew Road next to Busch Student Center, Piscataway",40.522445,-74.457571
+ParkBusch59,Lot 59,Parking Lot 59,Busch,Busch Student Center Area,"Brett Road behind Busch Student Center, Piscataway",40.522893,-74.459261
+ParkBusch60,Lot 60,Parking Lot 60A/60B,Busch,Busch Student Center Area,"Brett Road behind Busch Student Center, Piscataway",40.521564,-74.459284
+ParkBusch64,Lot 64,Parking Lot 64,Busch,Busch Student Center Area,"Behind Werblin Recreation Center, Piscataway",40.521368,-74.460446
+ParkBusch53A,Lot 53A,Parking Lot 53A,Busch,Life Sciences Area,"Frelinghuysen Road, Piscataway",40.520797,-74.463168
+ParkBusch63,Lot 63,Parking Lot 63,Busch,Life Sciences Area,"Davidson Road East, Piscatawy",40.523749,-74.454585
+ParkCADeck,College Avenue Deck,Parking Deck,College Avenue,Alexander Library Area,"George Street, New Brunswick",40.505153,-74.451348
+ParkCAC30,Lot 30,Parking Lot 30,College Avenue,Student Center Area,"Sicard Street; Behind College Avenue Student Center, New Brunswick",40.503619,-74.453237
+ParkCAC26,Lot 26,Parking Lot 26,College Avenue,Student Center Area,"Sicard Street; Behind College Avenue Student Center, New Brunswick",40.501889,-74.45259
+Park CAC16,Lot 16,Parking Lot 16,College Avenue,Voorhees Mall Area,"George Street, New Brunswick",40.501074,-74.446324
+ParkCACJJ,Johnson & Johnson Lot,Johnson & Johnson surface lot,College Avenue,Voorhees Mall Area,"Johnson Drive, New Brunswick",40.500845,-74.443878
+ParkCACGateway,Gateway Parking Deck,New Brunswick parking deck (parking fee),College Avenue,College Avenue Campus,"Wall Street; corner of Easton Avenue, New Brunswick",40.496978,-74.446753
+ParkCACChurch,Church Street Parking Deck,Church Street parking deck (parking fee),College Avenue,College Avenue Campus,"Church Street, New Brunswick",40.495803,-74.443298
+ParkCACWell,Wellness Center Parking Deck,RWJ Wellness Center parking deck,College Avenue,College Avenue Campus,"Paterson Street, above Fresh Grocer, New Brunswick",40.495134,-74.447611
+ParkCAC33,Lot 33,Parking Lot 33,College Avenue,Alexander Library Area,"Hamilton Street, New Brunswick",40.505691,-74.453268
+ParkCAC34,Lot 34,Parking Lot 34,College Avenue,Alexander Library Area,"Hamilton Street, New Brunswick",40.505662,-74.45271
+ParkCD70,Lot 70,Parking Lot 70,Cook/Douglass,Red Oak Lane Area,"Lipman Drive; behind Douglass Student Center, New Brunswick",40.48416,-74.437085
+ParkCDDeck,Douglass Parking Deck,Douglass parking deck,Cook/Douglass,Red Oak Lane Area,"Lipman Drive; behind Douglass Student Center, New Brunswick",40.483899,-74.43643
+ParkCD98A,Lot 98A,Parking lot 98A,Cook/Douglass,Farm Area,"Dudley Road; corner of College Farm Road, New Brunswick",40.478945,-74.437836
+ParkCD97,Lot 97,Parking lot 97,Cook/Douglass,Farm Area,"Dudley Road; corner of College Farm Road, New Brunswick",40.478692,-74.43598
+ParkCD76,Lot 76,Parking lot 76,Cook/Douglass,George H. Cook Campus,"Dudley Road; corner of Biel Road, New Brunswick",40.480545,-74.432278
+ParkCDSquibb,Bristol-Myers  Squibb Lot,Bristol-Myers Squibb parking lot (connect to shuttle bus to Cook/Douglass Campus),Cook/Douglass,Farm Area,"Route 1 South @ College Farm Road, New Brunswick",40.46947,-74.435111
+BusBuschCC,Busch Student Center Bus Stop,Busch Student Center Bus Stop,Busch,Busch Student Center Area,"Bartholemew Road, Piscataway",40.523423,-74.45836
+BusBuschRec,Werblin Recreation Center Bus Stop,Werblin Recreation Bus Stop,Busch,Busch Student Center Area,"Bartholemew Road, Piscataway",40.518815,-74.459959
+BusCACSAC,Student Activities Center Bus Stop,Student Activities Center Bus Stop,College Avenue,Alexander Library Area,"George Street, New Brunswick",40.504108,-74.449079
+BusCACZim,Zimmerli Art Museum Bus Stop,Zimmerli Art Museum Bus Stop,College Avenue,Voorhees Mall Area,"George Street; corner of Hamilton Street, New Brunswick",40.499932,-74.445496
+BusCACLiberty,Liberty Street  Bus Stop,Liberty Street Bus Stop,College Avenue,College Avenue Campus,"Liberty Street, New Brunswick",40.493449,-74.443475
+BusCACNew,New Street Bus Stop,New Street Bus Stop,College Avenue,College Avenue Campus,"George Street, New Brunswick",40.491909,-74.443151
+BusCDDCC,Douglass Student Center Bus Stop,Douglass Student Center Bus Stop,Cook/Douglass,Douglass Student Center,"George Street, New Brunswick",40.484617,-74.43584
+FoodBuschBK,Burger King,"Serving a variety of breakfast, lunch and dinner options",Busch,Busch Student Center Area,"inside Busch Student Center, Bartholemew Road, Piscataway",40.523423,-74.45836
+FoodBuschGP,Gerlanda's Pizza,"Specialty coffees, Panini's, large variety of specialty pizza",Busch,Busch Student Center Area,"inside Busch Student Center, Bartholemew Road, Piscataway",40.523423,-74.45836
+FoodBuschSI,Szechwan Ichiban,"Asian cuisine, sushi, bubble teas and smoothies",Busch,Busch Student Center Area,"inside Busch Student Center, Bartholemew Road, Piscataway",40.523423,-74.45836
+FoodBuschMoes,Moe's Southwest Grill,Fresh made-to-order southwest fare,Busch,Busch Student Center Area,"inside Busch Student Center, Bartholemew Road, Piscataway",40.523423,-74.45836
+FoodBuschJD,J-Dogs,"Hot dogs, soft pretzels, chicken tenders, fries, funnel cake, fried oreos, etc.",Busch,Life Sciences Area,by Allison Road Bus Stop,40.523741,-74.463939
+FoodBuschDining,Busch Dining Hall,Food court and dining hall offering a cafeteria-style menu at a special Rutgers Day price of $10.,Busch,Busch Student Center Area,"inside Busch Student Center, Bartholemew Road, Piscataway",40.523423,-74.45836
+FoodBuschGyro,G&L Gyro,"Gyro pita, shish ka bob, french fries, spinach pies",Busch,Life Sciences Area,by Allison Road Bus Stop,40.523741,-74.463939
+FoodBuschDebbieO,John & Debbie O's,"Funnel cakes, fried oreos, cotton candy, drinks",Busch,Life Sciences Area,by Science and Engineering Resource Center,40.523083,-74.463203
+FoodBuschMag,Maglione's Italian Ice,"Italian Ice, ice cream, cotton candy, soft pretzels, drinks",Busch,Engineering Area,by Fiber Optics Building,40.523521,-74.461519
+FoodCACWendy,Wendy's,"Serving a variety of breakfast, lunch and dinner options",College Avenue,Student Center Area,"inside College Avenue Student Center, College Avenue, New Brunswick",40.502974,-74.45218
+FoodCACGP,Gerlanda's Pizza,"Specialty coffees, Panini's, large variety of specialty pizza",College Avenue,Student Center Area,"inside College Avenue Student Center, College Avenue, New Brunswick",40.502974,-74.45218
+FoodCACSub,Subway,Fresh made-to-order sandwiches and salads,College Avenue,Student Center Area,"inside College Avenue Student Center, College Avenue, New Brunswick",40.502974,-74.45218
+FoodCACPita,Pita King Palace,Mediterranean cuisine,College Avenue,Student Center Area,"inside College Avenue Student Center, College Avenue, New Brunswick",40.502974,-74.45218
+FoodCACABP,Au Bon Pain,"Fresh bakery, specialty coffees, fresh salads, and sandwiches",College Avenue,Student Center Area,"inside College Avenue Student Center, College Avenue, New Brunswick",40.502974,-74.45218
+FoodCACCurrito,Currito,Fresh made-to-order burritos,College Avenue,Student Center Area,"inside College Avenue Student Center, College Avenue, New Brunswick",40.502974,-74.45218
+FoodCAC Brower,Brower Commons Dining Hall,Full cafeteria-style menu at a special Rutgers Day price of $10.,College Avenue,Student Center Area,"College Avenue, New Brunswick",40.503407,-74.451546
+FoodCACRita,Rita's Italian Ice,Italian Ice,College Avenue,Voorhees Mall Area,"College Avenue, New Brunswick",40.50051,-74.447866
+Food CACTexas,Texas Smoke BBQ,"BBQ pulled chicken, beef brisket, and pork sandwiches",College Avenue,Voorhees Mall Area,"College Avenue, New Brunswick",40.500101,-74.447627
+FoodCDCafe,Cook Café,"Deli, grill, and convenience store serving breakfast, lunch and dinner options",Cook/Douglass,George H. Cook Campus,"Cook Student Center, Biel Road, New Brunswick",40.479043,-74.431592
+FoodCDCafe2,Douglass Café,"Serving breakfast, lunch, and dinner options",Cook/Douglass,Red Oak Lane Area,"Douglass Student Center, George Street, New Brunswick",40.484853,-74.436462
+FoodCDAncho,Ancho Grill,Tex-Mex,Cook/Douglass,Red Oak Lane Area,"Douglass Student Center, George Street, New Brunswick",40.484853,-74.436462
+FoodCDDD,Dunkin' Donuts,"Specialty coffees, bakery, sandwiches",Cook/Douglass,Red Oak Lane Area,"Douglass Student Center, George Street, New Brunswick",40.484853,-74.436462
+FoodCDUno,Uno Pizza,Chicago-style pizza,Cook/Douglass,Red Oak Lane Area,"Douglass Student Center, George Street, New Brunswick",40.484853,-74.436462
+FoodCDDining,Neilson Dining Hall,Full cafeteria-style menu at a special Rutgers Day price of $10.,Cook/Douglass,George H. Cook Campus,"Dudley Road, New Brunswick",40.481475,-74.431549
+FoodCDGinas,Gina's Foods,"Gyros, kebabs, sausages, cheesesteaks, zeppoles, funnel cakes, fried oreos",Cook/Douglass,Passion Puddle Area,"Lipman Drive, New Brunswick",40.482144,-74.435744
+FoodCDKettle,Tasty Kettle Corn,"Kettle corn, cinnamon roasted nuts",Cook/Douglass,Passion Puddle Area,"Lipman Drive at College Farm Road, New Brunswick",40.480626,-74.436967
+FoodCDMaui,Island Fusion Maui Wowi,"Shish kebabs, fried rice, tacos, fritters, bubble tea, spring rolls",Cook/Douglass,Farm Area,"College Farm Road, New Brunswick",40.477966,-74.437031
+FoodCDDutch,Dutch Magic,"funnel cakes, lemonade",Cook/Douglass,Farm Area,"College Farm Road, New Brunswick",40.476815,-74.437149
+FoodCDAngel,Angelotti's,"Pizza, chicken tenders, fries, mozzarella sticks, fried oreos, drinks",Cook/Douglass,Passion Puddle Area,"Lipman Drive, New Brunswick",40.480973,-74.436403
+FoodCDMaddalena,Maddalena's Cheesecake,"Various desserts including cheescake on a stick, and apple crumb pie a la mode",Cook/Douglass,Passion Puddle Area,"Lipman Drive, New Brunswick",40.480473,-74.437705
+FoodCDWafels,Wafels and Dinges,Belgian waffles with assorted toppings,Cook/Douglass,Passion Puddle Area,"Lipman Drive, New Brunswick",40.480882,-74.438872
