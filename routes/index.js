@@ -75,30 +75,59 @@ exports.loginForm = function(req, res){
 exports.pushNotification = function(req, res){
 	console.log(req.user);
 	var text = req['body']['push-notification-text'];
-	var options = {
-		url: 'https://api.parse.com/1/push',
-		headers: {
-			'Content-Type': 'application/json',
-			'X-Parse-Application-Id': 'L4hwGiUpzXJNOuK3560BFS4ZFYe2AcH9hYO6A9OQ',
-			'X-Parse-REST-API-Key': 'zXT7vKWjF3DcOd4zE147zvpfRH8lBxkQCEzAF6my'
-		},
-		json: {
-			"channels": ["global"], 
-			"data": {
-    			"alert": text,
-    			"sound": "default"
-    		}
-    	}
-	};
 
-	request.post(options, function (error, response, body) {
-		if (body['result'] && body['result'] == true) {
-			redirectToConsole(res, messages['successPushNotification'] + text);
+	var ANDROID_ID = 'j6pp0B45WsQZMsLuJKWwPV3xs77g7D7AEfM5rNOb';
+	var ANDROID_KEY = 'S704VvKRVZ6P52UJYYhE61TwDPWC3jCt3E8gnv5Z';
+
+	var IOS_ID = 'L4hwGiUpzXJNOuK3560BFS4ZFYe2AcH9hYO6A9OQ';
+	var IOS_KEY = 'zXT7vKWjF3DcOd4zE147zvpfRH8lBxkQCEzAF6my';
+
+	sendPushNotification(ANDROID_ID, ANDROID_KEY, text, function(success, body) {
+		if (success) {
+			sendPushNotification(IOS_ID, IOS_KEY, text, function(success, body) {
+				if (success) {
+					redirectToConsole(res, messages['successPushNotification'] + text);
+				} else {
+					redirectToConsole(res, messages['errorPushNotification'] + JSON.stringify(body));
+				}
+			});
 		} else {
 			redirectToConsole(res, messages['errorPushNotification'] + JSON.stringify(body));
 		}
 	});
 };
+
+
+var sendPushNotification = function(appID, key, message, success) {
+	var options = {
+		url: 'https://api.parse.com/1/push',
+		headers: {
+			'Content-Type': 'application/json',
+			'X-Parse-Application-Id': appID,
+			'X-Parse-REST-API-Key': key
+		},
+		json: {
+			"channels": ["global"], 
+			"data": {
+				"alert": message,
+				"sound": "default",
+				"title": "Rutgers Day"
+			}
+		}
+	};
+
+	request.post(options, function (error, response, body) {
+		if (body && body['result'] && body['result'] == true) {
+			if (success) {
+				success(true, body);
+			}
+		} else {
+			if (success) {
+				success(false, body);
+			}
+		}
+	});
+}
 
 /*
  * POST CSV File Upload
